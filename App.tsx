@@ -80,6 +80,78 @@ const App: React.FC = () => {
   }, [reports, activeReportId]);
 
   // ============================================================================
+  // Chapter Management
+  // ============================================================================
+
+  const handleAddChapter = useCallback(() => {
+    if (!activeReport) return;
+
+    const newChapter: Chapter = {
+      id: `chapter-${Date.now()}`,
+      title: `Kapitel ${activeReport.chapters.length + 1}`,
+      blocks: [],
+    };
+
+    const updated = {
+      ...activeReport,
+      chapters: [...activeReport.chapters, newChapter],
+      updatedAt: new Date().toISOString(),
+    };
+
+    setReports(reports.map(r => r.id === activeReport.id ? updated : r));
+    setActiveChapterId(newChapter.id);
+  }, [activeReport, reports]);
+
+  const handleDeleteChapter = useCallback((chapterId: string) => {
+    if (!activeReport || activeReport.chapters.length <= 1) return;
+
+    const updated = {
+      ...activeReport,
+      chapters: activeReport.chapters.filter(c => c.id !== chapterId),
+      updatedAt: new Date().toISOString(),
+    };
+
+    setReports(reports.map(r => r.id === activeReport.id ? updated : r));
+    
+    if (activeChapterId === chapterId) {
+      setActiveChapterId(updated.chapters[0]?.id || null);
+    }
+  }, [activeReport, activeChapterId, reports]);
+
+  const handleRenameChapter = useCallback((chapterId: string, newTitle: string) => {
+    if (!activeReport) return;
+
+    const updated = {
+      ...activeReport,
+      chapters: activeReport.chapters.map(c =>
+        c.id === chapterId ? { ...c, title: newTitle } : c
+      ),
+      updatedAt: new Date().toISOString(),
+    };
+
+    setReports(reports.map(r => r.id === activeReport.id ? updated : r));
+    setEditingChapterTitle(null);
+  }, [activeReport, reports]);
+
+  // ============================================================================
+  // Block Management
+  // ============================================================================
+
+  const handleBlocksChange = useCallback((chapterId: string, blocks: any[]) => {
+    if (!activeReport) return;
+
+    const updated = {
+      ...activeReport,
+      chapters: activeReport.chapters.map(c =>
+        c.id === chapterId ? { ...c, blocks } : c
+      ),
+      updatedAt: new Date().toISOString(),
+    };
+
+    setReports(reports.map(r => r.id === activeReport.id ? updated : r));
+  }, [activeReport, reports]);
+
+  // ============================================================================
   // Render
   // ============================================================================
 
@@ -293,79 +365,6 @@ const App: React.FC = () => {
           </>
         ) : (
           /* ===== EMPTY STATE ===== */
-          <div className="flex-1 flex items-center justify-center">
-            <div className="text-center">
-              <FileText size={48} className="mx-auto text-gray-300 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Keine Reports vorhanden
-              </h3>
-              <p className="text-gray-500 mb-6">
-                Erstelle einen neuen Bericht oder ein Dossier, um zu starten
-              </p>
-              <div className="flex gap-3 justify-center">
-                <button
-                  onClick={() => createNewReport('bericht')}
-                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium"
-                >
-                  Bericht erstellen
-                </button>
-                <button
-                  onClick={() => createNewReport('dossier')}
-                  className="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 font-medium"
-                >
-                  Dossier erstellen
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}               <h3 className="text-sm font-semibold text-gray-900">Kapitel</h3>
-                  <button className="p-1 hover:bg-gray-100 rounded">
-                    <Plus size={16} />
-                  </button>
-                </div>
-                <div className="space-y-1">
-                  {activeReport.chapters.map((chapter) => (
-                    <button
-                      key={chapter.id}
-                      onClick={() => setActiveChapterId(chapter.id)}
-                      className={`w-full text-left px-3 py-2 rounded text-sm transition ${
-                        activeChapterId === chapter.id
-                          ? 'bg-blue-50 text-blue-900 font-medium'
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      {chapter.title}
-                      <div className="text-xs text-gray-500 mt-0.5">
-                        {chapter.blocks.length} Blöcke
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Canvas Area */}
-              <div className="flex-1 p-8 overflow-auto">
-                <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-sm p-12 min-h-[400px]">
-                  {activeChapterId && activeReport.chapters.find(c => c.id === activeChapterId) && (
-                    <div>
-                      <h4 className="text-xl font-bold mb-6">
-                        {activeReport.chapters.find(c => c.id === activeChapterId)?.title}
-                      </h4>
-                      <div className="text-gray-500 text-center py-12">
-                        <p>Editor wird noch aufgebaut...</p>
-                        <p className="text-sm mt-2">Hier können die Report-Blöcke bearbeitet werden</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </>
-        ) : (
           <div className="flex-1 flex items-center justify-center">
             <div className="text-center">
               <FileText size={48} className="mx-auto text-gray-300 mb-4" />
