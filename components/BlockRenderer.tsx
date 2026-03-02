@@ -21,7 +21,7 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
     }
   };
 
-  const commonEditClasses = isEditing ? 'bg-blue-50 border border-blue-200 rounded px-2 py-1' : '';
+  const commonEditClasses = isEditing ? 'outline-blue-500 outline-2 outline-dashed' : '';
 
   switch (block.type) {
     case 'h1':
@@ -32,7 +32,7 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
           onInput={handleChange as any}
           className={`text-4xl font-bold mb-6 leading-tight ${commonEditClasses}`}
         >
-          {block.content}
+          {block.content || 'Überschrift 1'}
         </h1>
       );
 
@@ -44,7 +44,7 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
           onInput={handleChange as any}
           className={`text-3xl font-bold mb-4 leading-tight ${commonEditClasses}`}
         >
-          {block.content}
+          {block.content || 'Überschrift 2'}
         </h2>
       );
 
@@ -56,7 +56,7 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
           onInput={handleChange as any}
           className={`text-2xl font-semibold mb-3 leading-tight ${commonEditClasses}`}
         >
-          {block.content}
+          {block.content || 'Überschrift 3'}
         </h3>
       );
 
@@ -68,7 +68,7 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
           onInput={handleChange as any}
           className={`text-lg leading-relaxed mb-4 text-gray-700 ${commonEditClasses}`}
         >
-          {block.content}
+          {block.content || 'Text eingeben...'}
         </p>
       );
 
@@ -87,13 +87,24 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
               onInput={handleChange as any}
               className={`flex-1 text-sm ${commonEditClasses}`}
             >
-              {block.content}
+              {block.content || 'Hinweis...'}
             </p>
           </div>
         </div>
       );
 
     case 'bullets':
+      if (isEditing) {
+        return (
+          <textarea
+            value={block.content}
+            onChange={(e) => onContentChange?.(e.target.value)}
+            placeholder="Ein Punkt pro Zeile..."
+            className="w-full p-3 border-2 border-blue-300 rounded bg-blue-50 text-gray-700 resize-none font-sans"
+            rows={Math.max(3, block.content.split('\n').length)}
+          />
+        );
+      }
       return (
         <ul className="mb-4 pl-6 space-y-2">
           {block.content.split('\n').filter(Boolean).map((item, idx) => (
@@ -112,6 +123,9 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
               src={block.metadata.src}
               alt={block.metadata.caption || 'Image'}
               className="w-full rounded-lg mb-2 object-cover max-h-96"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="400"%3E%3Crect fill="%23ddd" width="800" height="400"/%3E%3Ctext fill="%23999" x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle"%3EBild nicht gefunden%3C/text%3E%3C/svg%3E';
+              }}
             />
           )}
           {block.metadata?.caption && (
@@ -119,29 +133,59 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
               {block.metadata.caption}
             </p>
           )}
+          {isEditing && (
+            <div className="mt-2 text-xs text-gray-500 italic">
+              💡 Tipp: Bild-URL im Metadata-Editor ändern (kommt bald)
+            </div>
+          )}
         </div>
       );
 
     case 'spacer':
-      return <div className="mb-4" style={{ height: `${block.metadata?.fontSize || 32}px` }} />;
+      return (
+        <div 
+          className="mb-4 border-l-2 border-dashed border-gray-300" 
+          style={{ height: `${block.metadata?.fontSize || 32}px` }}
+        >
+          {isEditing && (
+            <span className="text-xs text-gray-400">
+              Spacer ({block.metadata?.fontSize || 32}px)
+            </span>
+          )}
+        </div>
+      );
 
     case 'divider':
-      return <hr className="my-6 border-t border-gray-300" />;
+      return <hr className="my-6 border-t-2 border-gray-300" />;
 
     case 'quote-block':
       return (
         <blockquote className="italic text-lg border-l-4 border-blue-500 pl-4 py-2 my-4 text-gray-600">
-          "{block.content}"
+          <span
+            contentEditable={isEditing}
+            suppressContentEditableWarning={isEditing}
+            onInput={handleChange as any}
+            className={commonEditClasses}
+          >
+            {block.content || 'Zitat...'}
+          </span>
         </blockquote>
       );
 
     case 'table':
+      if (!block.metadata?.tableData || block.metadata.tableData.length === 0) {
+        return (
+          <div className="p-8 bg-gray-50 rounded-lg text-center text-gray-500 mb-4">
+            <p>📊 Keine Tabellendaten vorhanden</p>
+          </div>
+        );
+      }
       return (
         <div className="overflow-x-auto mb-4">
           <table className="w-full border-collapse border border-gray-300">
             <tbody>
-              {block.metadata?.tableData?.map((row, idx) => (
-                <tr key={idx} className={idx === 0 ? 'bg-gray-100' : ''}>
+              {block.metadata.tableData.map((row, idx) => (
+                <tr key={idx} className={idx === 0 && block.metadata?.tableHeader ? 'bg-gray-100 font-semibold' : ''}>
                   {row.map((cell, cidx) => (
                     <td
                       key={cidx}
@@ -154,13 +198,25 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
               ))}
             </tbody>
           </table>
+          {isEditing && (
+            <p className="text-xs text-gray-500 mt-2 italic">
+              💡 Tipp: Tabellen-Editor kommt bald
+            </p>
+          )}
         </div>
       );
 
     case 'metrics':
+      if (!block.metadata?.metricsData || block.metadata.metricsData.length === 0) {
+        return (
+          <div className="p-8 bg-gray-50 rounded-lg text-center text-gray-500 mb-4">
+            <p>📈 Keine Metriken vorhanden</p>
+          </div>
+        );
+      }
       return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-          {block.metadata?.metricsData?.map(metric => (
+          {block.metadata.metricsData.map(metric => (
             <div
               key={metric.id}
               className="p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg text-center"
@@ -174,9 +230,16 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
       );
 
     case 'gallery':
+      if (!block.metadata?.images || block.metadata.images.length === 0) {
+        return (
+          <div className="p-8 bg-gray-50 rounded-lg text-center text-gray-500 mb-4">
+            <p>🖼️ Keine Bilder in der Galerie</p>
+          </div>
+        );
+      }
       return (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-          {block.metadata?.images?.map(img => (
+          {block.metadata.images.map(img => (
             <div key={img.id}>
               <img
                 src={img.src}
@@ -194,13 +257,16 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
     case 'container':
       return (
         <div
-          className="p-6 rounded-lg mb-4 border"
+          className="p-6 rounded-lg mb-4 border-2 border-dashed border-gray-300"
           style={{
-            backgroundColor: block.metadata?.containerBgColor || 'transparent',
-            opacity: block.metadata?.containerOpacity,
+            backgroundColor: block.metadata?.containerBgColor || '#f9fafb',
+            opacity: block.metadata?.containerOpacity ?? 1,
           }}
         >
-          <div className="text-sm text-gray-500">Container</div>
+          <div className="text-sm text-gray-500 font-medium mb-2">📦 Container</div>
+          <div className="text-xs text-gray-400">
+            Verschachtelte Inhalte kommen bald
+          </div>
         </div>
       );
 
@@ -208,35 +274,82 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
     case 'columns-3':
     case 'columns-4':
       const numCols = parseInt(block.type.split('-')[1]);
+      const gridClass = numCols === 2 ? 'grid-cols-2' : numCols === 3 ? 'grid-cols-3' : 'grid-cols-4';
       return (
-        <div className={`grid gap-6 mb-6 grid-cols-${numCols}`}>
-          {block.metadata?.columns?.map((col, idx) => (
-            <div key={idx} className="bg-gray-50 rounded p-4 text-sm text-gray-500">
-              Column {idx + 1}
+        <div className={`grid ${gridClass} gap-6 mb-6`}>
+          {Array(numCols).fill(0).map((_, idx) => (
+            <div key={idx} className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center text-sm text-gray-500">
+              <div className="font-medium mb-1">Spalte {idx + 1}</div>
+              <div className="text-xs text-gray-400">Coming soon</div>
             </div>
           ))}
         </div>
       );
 
     case 'timeline':
+      if (!block.metadata?.timelineItems || block.metadata.timelineItems.length === 0) {
+        return (
+          <div className="p-8 bg-gray-50 rounded-lg text-center text-gray-500 mb-4">
+            <p>🕐 Keine Timeline-Einträge</p>
+          </div>
+        );
+      }
       return (
         <div className="mb-6 space-y-4">
-          {block.metadata?.timelineItems?.map(item => (
-            <div key={item.id} className="flex gap-4">
-              <div className="w-20 text-sm font-semibold text-gray-600">{item.date}</div>
-              <div>
+          {block.metadata.timelineItems.map(item => (
+            <div key={item.id} className="flex gap-4 items-start">
+              <div className="w-20 text-sm font-semibold text-gray-600 pt-1">{item.date}</div>
+              <div className="flex-1">
                 <h4 className="font-semibold text-gray-900">{item.title}</h4>
-                <p className="text-sm text-gray-600">{item.description}</p>
+                <p className="text-sm text-gray-600 mt-1">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
       );
 
+    case 'page-break':
+      return (
+        <div className="my-8 flex items-center justify-center">
+          <div className="border-t-4 border-dashed border-gray-400 flex-1"></div>
+          <span className="px-4 text-sm font-medium text-gray-500 bg-gray-100 rounded">
+            📄 Seitenumbruch
+          </span>
+          <div className="border-t-4 border-dashed border-gray-400 flex-1"></div>
+        </div>
+      );
+
+    case 'chapter-divider':
+      return (
+        <div className="my-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500">
+          <div className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-1">
+            {block.metadata?.chapterNumber ? `Kapitel ${block.metadata.chapterNumber}` : 'Kapitel'}
+          </div>
+          <h3
+            contentEditable={isEditing}
+            suppressContentEditableWarning={isEditing}
+            onInput={handleChange as any}
+            className={`text-2xl font-bold text-gray-900 ${commonEditClasses}`}
+          >
+            {block.content || block.metadata?.chapterTitle || 'Kapitel-Titel'}
+          </h3>
+        </div>
+      );
+
+    case 'toc':
+      return (
+        <div className="my-6 p-6 bg-gray-50 rounded-lg border border-gray-200">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Inhaltsverzeichnis</h3>
+          <div className="text-sm text-gray-500 italic">
+            Wird automatisch generiert beim Export
+          </div>
+        </div>
+      );
+
     default:
       return (
-        <div className="text-gray-500 text-sm">
-          Block type: {block.type}
+        <div className="p-4 bg-yellow-50 border border-yellow-200 rounded text-sm text-gray-600">
+          ⚠️ Block-Typ nicht unterstützt: <code className="font-mono bg-white px-2 py-1 rounded">{block.type}</code>
         </div>
       );
   }
