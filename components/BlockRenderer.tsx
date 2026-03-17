@@ -1,16 +1,21 @@
 import React from 'react';
+import { UploadCloud, Loader2 } from 'lucide-react';
 import { ReportBlock } from '../types';
 
 interface BlockRendererProps {
   block: ReportBlock;
   isEditing?: boolean;
   onContentChange?: (content: string) => void;
+  onImageUpload?: (file: File) => Promise<void>;
+  isUploading?: boolean;
 }
 
 const BlockRenderer: React.FC<BlockRendererProps> = ({
   block,
   isEditing = false,
   onContentChange,
+  onImageUpload,
+  isUploading = false,
 }) => {
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLDivElement>) => {
     if (onContentChange) {
@@ -134,8 +139,39 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
             </p>
           )}
           {isEditing && (
-            <div className="mt-2 text-xs text-gray-500 italic">
-              💡 Tipp: Bild-URL im Metadata-Editor ändern (kommt bald)
+            <div className="mt-3">
+              {onImageUpload && (
+                <label className="flex items-center justify-center gap-2 px-4 py-3 bg-blue-50 border-2 border-blue-200 border-dashed rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                  {isUploading ? (
+                    <>
+                      <Loader2 size={18} className="animate-spin text-blue-600" />
+                      <span className="text-sm font-medium text-blue-600">Wird hochgeladen...</span>
+                    </>
+                  ) : (
+                    <>
+                      <UploadCloud size={18} className="text-blue-600" />
+                      <span className="text-sm font-medium text-blue-600">Bild hochladen oder ersetzen</span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        onChange={async (e) => {
+                          const file = e.target.files?.[0];
+                          if (file) {
+                            await onImageUpload(file);
+                          }
+                        }}
+                        disabled={isUploading}
+                      />
+                    </>
+                  )}
+                </label>
+              )}
+              {!onImageUpload && (
+                <div className="text-xs text-gray-500 italic">
+                  💡 Tipp: Firebase Storage konfigurieren für Image Upload
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -198,11 +234,6 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
               ))}
             </tbody>
           </table>
-          {isEditing && (
-            <p className="text-xs text-gray-500 mt-2 italic">
-              💡 Tipp: Tabellen-Editor kommt bald
-            </p>
-          )}
         </div>
       );
 
@@ -257,30 +288,42 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
     case 'container':
       return (
         <div
-          className="p-6 rounded-lg mb-4 border-2 border-dashed border-gray-300"
-          style={{
-            backgroundColor: block.metadata?.containerBgColor || '#f9fafb',
-            opacity: block.metadata?.containerOpacity ?? 1,
-          }}
+          className="relative p-6 rounded-lg mb-4 border-2 border-dashed border-gray-300 overflow-hidden"
         >
-          <div className="text-sm text-gray-500 font-medium mb-2">📦 Container</div>
-          <div className="text-xs text-gray-400">
-            Verschachtelte Inhalte kommen bald
+          <div
+            className="absolute inset-0 rounded-lg"
+            style={{
+              backgroundColor: block.metadata?.containerBgColor || '#f9fafb',
+              opacity: block.metadata?.containerOpacity ?? 0.1,
+            }}
+          />
+          <div className="relative z-10">
+            <div className="text-sm text-gray-500 font-medium mb-2">📦 Container</div>
+            <div className="text-xs text-gray-400">
+              Verschachtelte Inhalte kommen bald
+            </div>
           </div>
         </div>
       );
 
-    case 'columns-2':
-    case 'columns-3':
-    case 'columns-4':
-      const numCols = parseInt(block.type.split('-')[1]);
+    case 'columns':
+      const numCols = block.metadata?.columnCount || 2;
+      const columns = Array.from({ length: numCols }, (_, idx) => block.metadata?.columns?.[idx] || []);
       const gridClass = numCols === 2 ? 'grid-cols-2' : numCols === 3 ? 'grid-cols-3' : 'grid-cols-4';
       return (
         <div className={`grid ${gridClass} gap-6 mb-6`}>
-          {Array(numCols).fill(0).map((_, idx) => (
-            <div key={idx} className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center text-sm text-gray-500">
-              <div className="font-medium mb-1">Spalte {idx + 1}</div>
-              <div className="text-xs text-gray-400">Coming soon</div>
+          {columns.map((columnBlocks, idx) => (
+            <div key={idx} className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-4 text-sm text-gray-700 space-y-2">
+              <div className="font-medium mb-1 text-gray-600">Spalte {idx + 1}</div>
+              {columnBlocks.length === 0 ? (
+                <div className="text-xs text-gray-400">Leer</div>
+              ) : (
+                columnBlocks.map((nestedBlock) => (
+                  <p key={nestedBlock.id} className="text-sm text-gray-700 bg-white p-2 rounded border border-gray-100">
+                    {nestedBlock.content}
+                  </p>
+                ))
+              )}
             </div>
           ))}
         </div>
@@ -323,7 +366,7 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
       return (
         <div className="my-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500">
           <div className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-1">
-            {block.metadata?.chapterNumber ? `Kapitel ${block.metadata.chapterNumber}` : 'Kapitel'}
+            {block.metadata?.chapterNumber ? `Chapter ${block.metadata.chapterNumber}` : 'Chapter'}
           </div>
           <h3
             contentEditable={isEditing}
@@ -331,7 +374,7 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({
             onInput={handleChange as any}
             className={`text-2xl font-bold text-gray-900 ${commonEditClasses}`}
           >
-            {block.content || block.metadata?.chapterTitle || 'Kapitel-Titel'}
+            {block.content || block.metadata?.chapterTitle || 'Chapter Title'}
           </h3>
         </div>
       );

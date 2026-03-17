@@ -5,23 +5,53 @@
 export type ReportType = 'bericht' | 'dossier';
 
 export type ReportBlockType = 
+  // Text Content
   | 'h1' | 'h2' | 'h3' 
   | 'text' 
   | 'highlight' 
   | 'bullets' 
+  | 'quote-block'
+  | 'citation'
+  // Media
   | 'image' 
   | 'gallery' 
-  | 'columns-2' | 'columns-3' | 'columns-4'
+  | 'video'
+  | 'embed'
+  // Layout
+  | 'columns'
+  | 'container'
   | 'spacer' 
   | 'divider' 
+  // Interactive
+  | 'button'
+  | 'link'
+  | 'cta'
+  // Data Visualization
   | 'table'
   | 'metrics'
   | 'timeline'
-  | 'quote-block'
+  | 'faq'
+  | 'database'
+  // Report Specific
   | 'page-break'
   | 'chapter-divider'
-  | 'toc' // Table of Contents (auto-generated)
-  | 'container';
+  | 'cover-page'
+  | 'toc'; // Table of Contents (auto-generated)
+
+export interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+export interface DatabaseItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  contentBlocks?: ReportBlock[];
+}
 
 export interface ReportBlock {
   id: string;
@@ -33,7 +63,7 @@ export interface ReportBlock {
     caption?: string;
     images?: GalleryImage[];
     
-    // Columns
+    // Columns - unified system with variable column count
     columns?: ReportBlock[][];
     columnCount?: number;
     
@@ -45,7 +75,7 @@ export interface ReportBlock {
     // Highlight/Callout
     highlightColor?: string;
     highlightOpacity?: number;
-    highlightIcon?: '💡' | 'ℹ️' | '⚠️' | '🛑' | '✅';
+    highlightIcon?: '💡' | 'ℹ️' | '⚠️' | '🛑' | '✅' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
     
     // Lists
     listStyle?: 'bullets' | 'numbered';
@@ -65,12 +95,49 @@ export interface ReportBlock {
     containerBgColor?: string;
     containerOpacity?: number;
     
+    // Button & CTA
+    buttonText?: string;
+    buttonLink?: string;
+    variant?: 'primary' | 'secondary' | 'outline';
+    
+    // Link
+    link?: string;
+    
+    // Citation
+    citationAuthor?: string;
+    
+    // Video & Embed
+    height?: number;
+    embedWidth?: number;
+    embedHeight?: number;
+    
+    // FAQ
+    faqItems?: FAQItem[];
+    
+    // Database
+    dbItems?: DatabaseItem[];
+    dbView?: 'grid' | 'list';
+    collectionName?: string;
+    sourceId?: string;
+    activeFilter?: string;
+    
     // Page Break
     pageBreakType?: 'before' | 'after';
     
     // Chapter Divider
     chapterNumber?: number;
     chapterTitle?: string;
+    
+    // Cover Page
+    coverPageVariant?: 'standard' | 'minimal' | 'luxury';
+    coverPageSubtitle?: string;
+    coverPageVersion?: string;
+    coverPageConfidentiality?: string; // e.g. "Confidential", "Public", "Internal"
+    coverPageBranding?: string; // Logo URL or text
+    
+    // Generic metadata
+    title?: string;
+    description?: string;
   };
 }
 
@@ -145,10 +212,31 @@ export interface ReportSettings {
   footerText?: string;
   tocEnabled?: boolean;
   
+  // Branding
+  sidebarBrandLine1?: string; // e.g., "re:think yachting"
+  sidebarBrandLine2?: string; // e.g., "report & dossier studio"
+  sidebarFooterText?: string; // e.g., "re:think yachting UG - Hamburg"
+  reportFooterText?: string; // e.g., "Mastery re:engineered."
+  
+  // Layout Options
+  layoutVariant?: 'default' | 'minimal' | 'corporate';
+  coverPageEnabled?: boolean;
+  tocPosition?: 'start' | 'after-cover'; // Position of table of contents
+  
   // PDF Options
   pdfQuality?: 'draft' | 'standard' | 'high';
   embedFonts?: boolean;
   compressImages?: boolean;
+  
+  // Storage Configuration  
+  storageConfig?: {
+    projectId: string;
+    bucketName: string;
+    region: string;
+    apiKey?: string;
+    authDomain?: string;
+    enabled: boolean;
+  };
 }
 
 // ============================================================================

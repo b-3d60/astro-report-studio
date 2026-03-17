@@ -16,6 +16,9 @@ dist-ssr
 *.local
 .DS_Store
 
+# Studio Data (lokale Persistierung - wird vom Server verwaltet)
+.studio/
+
 # IDE
 .vscode
 .idea

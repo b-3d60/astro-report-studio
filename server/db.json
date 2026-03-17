@@ -1,0 +1,3920 @@
+{
+  "reports": [
+    {
+      "id": "report-1772518279794",
+      "title": "Maritime Energy Intelligence",
+      "chapters": [
+        {
+          "id": "chapter-1772518279794",
+          "title": "Cover",
+          "blocks": [
+            {
+              "id": "block-1772518420473-tejcr",
+              "type": "cover-page",
+              "content": "Maritime Energy Intelligence",
+              "metadata": {
+                "coverPageVariant": "minimal",
+                "coverPageSubtitle": "TRL Acceleration through Digital Twin Validation",
+                "coverPageVersion": "1.0",
+                "coverPageConfidentiality": "Confidential"
+              }
+            }
+          ]
+        },
+        {
+          "id": "chapter-1772518441856",
+          "title": "Executive Overview",
+          "blocks": [
+            {
+              "id": "block-1772518491248-1wir5",
+              "type": "h2",
+              "content": "Strategic Context",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519213006-8pvw1",
+              "type": "text",
+              "content": "The hybridization of yacht energy systems is accelerating. Modern yachts increasingly integrate generators, battery storage, shore power, photovoltaic systems, and complex hotel loads into interconnected energy architectures.\n\nAt the same time, regulatory pressure, fuel cost volatility, emission transparency requirements, and owner expectations are rising. Energy systems are no longer auxiliary infrastructure — they are strategic performance assets.\n\nIn adjacent industries such as smart buildings and industrial energy systems, advanced optimization algorithms already exist to manage load distribution, peak reduction, and system efficiency. However, these solutions have not yet been systematically validated in the maritime hybrid yacht domain.\n\nThis creates a structural opportunity.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551826193-w88p6",
+              "type": "image",
+              "content": "",
+              "metadata": {
+                "src": "https://storage.googleapis.com/rethink-yachting-web-storage/Generated%20Image%20October%2009%2C%202025%20-%2010_18AM.png",
+                "caption": "Bildunterschrift"
+              }
+            },
+            {
+              "id": "block-1772518500631-oaayp",
+              "type": "h2",
+              "content": "Problem Definition",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519244081-kie31",
+              "type": "text",
+              "content": "Despite increasing system complexity, hybrid yachts currently lack a validated, algorithm-driven energy intelligence layer capable of:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519255898-bovai",
+              "type": "bullets",
+              "content": "identifying load-shift potential\n\nOptimizing generator runtime\n\nManaging battery buffering dynamically\n\nReducing peak loads\n\nStructuring energy performance as a controllable system",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772519272514-rt1e3",
+              "type": "text",
+              "content": "Existing marine energy management systems primarily focus on monitoring, KPI reporting, or fleet-level optimization. They do not provide domain-validated algorithmic load-shift intelligence tailored to hybrid superyacht architectures.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519283823-k3y3t",
+              "type": "text",
+              "content": "The result is a technological gap:\n\nHybrid systems exist.\nOperational data exists.\nOptimization algorithms exist in other industries.\nBut no validated integration framework exists for hybrid yachts.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518511014-hd0c7",
+              "type": "h2",
+              "content": "Opportunity Gap (TRL/DRL/DAS)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519319556-i2fts",
+              "type": "h3",
+              "content": "Technology Readiness Level (Maritime Context)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519333048-849su",
+              "type": "text",
+              "content": "While the underlying algorithm is mature in the building domain (TRL 7–8), its readiness within the yacht domain is currently assessed at:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519366493-rvdar",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772519387706-zqtum",
+                      "type": "highlight",
+                      "content": "TRL 1-2",
+                      "metadata": {
+                        "highlightIcon": "💡",
+                        "highlightColor": "#f59e0b",
+                        "highlightOpacity": 0.12
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772519376139-c2h8f",
+                      "type": "bullets",
+                      "content": "Basic principles observed\n\nConcept formulated\n\nNo maritime validation\n\nNo real operational testing",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772519405561-0lqnx",
+              "type": "h3",
+              "content": "Domain Readiness Level",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519422990-xifqy",
+              "type": "text",
+              "content": "The yacht market shows clear demand signals:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519437431-u094m",
+              "type": "bullets",
+              "content": "Hybrid system adoption is increasing\n\nOwners demand efficiency and transparency\n\nRegulatory frameworks are tightening\n\nShipyards seek differentiation",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772519468114-cipox",
+              "type": "text",
+              "content": "Domain readiness is assessed at:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519486564-ia4al",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772519490431-tjaxo",
+                      "type": "highlight",
+                      "content": "DRL 7",
+                      "metadata": {
+                        "highlightIcon": "💡",
+                        "highlightColor": "#f59e0b",
+                        "highlightOpacity": 0.12
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772519500397-8y2s9",
+                      "type": "bullets",
+                      "content": "Strong market pull\n\nEarly adopters emerging\n\nNo dominant solution",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772519517018-d8e0y",
+              "type": "h3",
+              "content": "Domain Alignment Score (DAS)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519533043-j9ox2",
+              "type": "text",
+              "content": "Using the defined methodology:\n\nDAS = (DRL − TRL) / 8\nDAS = (7 − 2) / 8 = +0.625\n\nInterpretation:\n\nDomain-lead mismatch — opportunity gap\n\nThe market demand significantly exceeds validated technological maturity in the maritime domain. This is not a risk; it is a structured acceleration opportunity.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518548810-3rtqh",
+              "type": "h2",
+              "content": "Project Objective",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519568320-bskus",
+              "type": "text",
+              "content": "The objective of this initiative is not incremental optimization.\nIt is structured TRL acceleration.\n\nThe project aims to:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519597282-2mzi3",
+              "type": "bullets",
+              "content": "Transfer and adapt an existing energy optimization algorithm into the hybrid yacht domain\n\nValidate load-shift and generator optimization potential using real yacht load profiles\n\nSimulate and test performance in a Digital Twin Superyacht (Compute-to-Data architecture)\n\nProgress systematically from TRL 2 to TRL 6–7\n\nEstablish the foundation for a maritime energy intelligence standard",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772519613260-pwlxt",
+              "type": "text",
+              "content": "The initiative follows a clearly defined phase-and-gate structure aligned with TRL progression.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518563735-4avwh",
+              "type": "h2",
+              "content": "Phase Overview",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519683676-xvqi9",
+              "type": "text",
+              "content": "The project is structured across four phases:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519715914-2hbvg",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772519719390-x3njl",
+                      "type": "h3",
+                      "content": "Phase 1 – Opportunity Mapping (TRL 1–2)",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772519731493-k7xsl",
+                      "type": "bullets",
+                      "content": "Maritime energy system taxonomy\n\nLoad profile requirements\n\nHypothesis formation\n\nConcept validation (Gate 1)",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772519740943-vspr7",
+                      "type": "h3",
+                      "content": "Phase 2 – Collaborative Prototyping (TRL 3–4)",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772519750872-qbe26",
+                      "type": "bullets",
+                      "content": "Real yacht load data acquisition\n\nDigital Twin integration\n\nSimulation of load-shift scenarios\n\nValidation of algorithm robustness (Gate 2)",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772519761847-lmv91",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772519761847-262ch",
+                      "type": "h3",
+                      "content": "Phase 3 – Validation at Sea (TRL 5–7)",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772519761847-gzruo",
+                      "type": "bullets",
+                      "content": "Pilot integration in operational yacht environment\n\nAdvisory mode validation\n\nMeasured efficiency and runtime reduction\n\nOperational performance validation (Gate 3)",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772519761847-ce3yw",
+                      "type": "h3",
+                      "content": "Phase 4 – Integration & Scaling (TRL 8–9)",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772519761847-mugwv",
+                      "type": "bullets",
+                      "content": "System qualification\n\nStandardization framework\n\nIndustrial integration\n\nCommercialization pathway",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772519805873-o7tin",
+              "type": "text",
+              "content": "This structured progression ensures that technological maturity is aligned with domain readiness, systematically closing the opportunity gap and transforming a TRL 2 concept into a validated maritime energy intelligence solution.",
+              "metadata": {}
+            }
+          ]
+        },
+        {
+          "id": "chapter-1772518576319",
+          "title": "Domain & Technology Assessment",
+          "blocks": [
+            {
+              "id": "block-1772518596281-d6ups",
+              "type": "h2",
+              "content": "Market & Domain Readiness (DRL Analysis)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539630086-snwjm",
+              "type": "h3",
+              "content": "Structural Shift in Yacht Energy Architectures",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539644507-qczd9",
+              "type": "text",
+              "content": "Modern yachts are transitioning from conventional diesel-dominant systems toward hybrid and partially electrified architectures. These systems increasingly integrate:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539654215-kq2b3",
+              "type": "bullets",
+              "content": "Multiple generators\n\nBattery storage systems\n\nShore power interfaces\n\nPhotovoltaic installations\n\nComplex hotel loads\n\nDynamic operational modes (harbor / anchor / cruising / peak load)",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772539668290-fswm3",
+              "type": "text",
+              "content": "Energy systems are no longer static infrastructure components. They operate as interconnected, multi-source energy networks.\n\nThis structural evolution increases:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539676511-l4m9t",
+              "type": "bullets",
+              "content": "System interdependency\n\nLoad volatility\n\nOperational decision complexity\n\nOptimization potential",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772539717024-bdsfn",
+              "type": "h3",
+              "content": "Demand Drivers",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539737490-qbxq8",
+              "type": "text",
+              "content": "he domain exhibits strong pull factors:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539758040-c2eve",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772539762058-hhw3u",
+                      "type": "h3",
+                      "content": "Regulatory Pressure",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772539774133-qfsep",
+                      "type": "bullets",
+                      "content": "Emission reporting\n\nEnvironmental compliance requirements\n\nIncreasing transparency expectations",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772539785897-bqs5d",
+                      "type": "h3",
+                      "content": "Owner Expectations",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772539810024-styl3",
+                      "type": "bullets",
+                      "content": "Reduced fuel consumption\n\nLower emissions\n\nQuiet operation\n\nMeasurable sustainability performance",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772539824928-7lzoo",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772539824928-zrqcs",
+                      "type": "h3",
+                      "content": "Shipyard Differentiation Pressure",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772539824928-ldjn3",
+                      "type": "bullets",
+                      "content": "Hybrid readiness\n\nTechnology-driven value propositions\n\nLong-term service and optimization offerings",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772539824928-m7i99",
+                      "type": "h3",
+                      "content": "Operational Complexity",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772539824928-20mzr",
+                      "type": "bullets",
+                      "content": "Increasing energy management burden on crew\n\nManual optimization insufficient in dynamic environments",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772539880846-ys4gx",
+              "type": "h3",
+              "content": "DRL Assessment",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539918995-ppvys",
+              "type": "text",
+              "content": "Domain Readiness Level is assessed at:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539930362-owsi6",
+              "type": "highlight",
+              "content": "DRL 7",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772539942749-jhtn6",
+              "type": "text",
+              "content": "Characteristics:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539955067-oq7xd",
+              "type": "bullets",
+              "content": "Clear problem awareness\n\nActive hybridization trend\n\nEarly adopters present\n\nNo dominant standard\n\nHigh willingness to explore structured solutions",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772539973416-k6s5h",
+              "type": "text",
+              "content": "The domain is not speculative.\nIt is structurally ready for validated optimization frameworks.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518614014-1aw1j",
+              "type": "h2",
+              "content": "Technology Baseline (Origin TRL)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539995825-kwfvy",
+              "type": "text",
+              "content": "The underlying optimization algorithm originates from the building energy management sector.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772539990778-n4baa",
+              "type": "h3",
+              "content": "Existing Capabilities (Building Context)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540017720-ijit1",
+              "type": "bullets",
+              "content": "Load forecasting\n\nPeak-shaving optimization\n\nMulti-source energy dispatch\n\nGenerator runtime optimization\n\nBattery buffering strategies\n\nPerformance KPI evaluation",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772540033691-uscwa",
+              "type": "text",
+              "content": "In its original domain, the algorithm operates at:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540042641-qbz2e",
+              "type": "highlight",
+              "content": "TRL 7–8",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772540055091-fpjig",
+              "type": "text",
+              "content": "Meaning:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540063566-7y48x",
+              "type": "bullets",
+              "content": "System demonstrated in operational environment\n\nProven performance\n\nStable deployment",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772540074012-5261b",
+              "type": "h3",
+              "content": "Transfer Complexity",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540091695-9btn6",
+              "type": "text",
+              "content": "Despite maturity in buildings, direct transfer to yachts is non-trivial due to:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540102724-ksztq",
+              "type": "bullets",
+              "content": "Highly dynamic load behavior\n\nEnvironmental variability (sea state, navigation profile)\n\nSpatial constraints\n\nRedundancy and safety requirements\n\nNon-standardized system architectures",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772540117158-u8goj",
+              "type": "text",
+              "content": "Therefore, in the yacht domain, the technology is assessed at:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540125520-vzvbc",
+              "type": "highlight",
+              "content": "TRL 1–2",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772518645398-flba8",
+              "type": "h2",
+              "content": "Maritime TRL Assessment",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540163675-pxph3",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772540169116-ljzy8",
+                      "type": "h3",
+                      "content": "TRL 1 - Basic Principles Observed",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772540192683-c12fa",
+                      "type": "bullets",
+                      "content": "Theoretical load-shift potential identified\n\nHybrid yacht systems structurally capable of optimization\n\nCross-domain applicability plausible",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772540202780-fhsq3",
+                      "type": "h3",
+                      "content": "TRL 2 - Concept Formulated",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772540217262-5mbdc",
+                      "type": "bullets",
+                      "content": "Maritime system taxonomy defined\n\nInitial hypothesis of load-shift potential developed\n\nDigital Twin integration strategy conceptualized\n\nData requirements specified",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772540253879-l4qzl",
+              "type": "text",
+              "content": "No experimental maritime validation has yet been conducted.\nTherefore:\nCurrent Maritime TRL = 2",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518658352-xmigp",
+              "type": "h2",
+              "content": "Domain Alignment Score",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540306396-udk10",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772540315434-8ivag",
+                      "type": "text",
+                      "content": "Using your formal framework:",
+                      "metadata": {}
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772540326309-2gyda",
+                      "type": "text",
+                      "content": "TRL (Maritime) = 2\nDRL = 7\n\nDAS = (7 − 2) / 8 = +0.625",
+                      "metadata": {}
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772540354405-4ryxh",
+              "type": "h3",
+              "content": "Interpretation:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540374159-isr0h",
+              "type": "text",
+              "content": "This represents a:\n\nDomain-lead mismatch (Opportunity Gap)\n\nThe market pull significantly exceeds validated technological maturity within the maritime context.\n\nThis is strategically advantageous because:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540398425-t0kx7",
+              "type": "bullets",
+              "content": "Market demand is confirmed\n\nCompetitive landscape is not saturated\n\nNo dominant hybrid yacht energy intelligence solution exists\n\nStructured TRL acceleration can create first-mover positioning",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772540413630-owoo4",
+              "type": "h2",
+              "content": "Competitive Landscape Positioning",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540461992-7m9b1",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772540471025-d4ddk",
+                      "type": "text",
+                      "content": "Existing marine energy management systems primarily provide:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772540483188-bc79h",
+                      "type": "bullets",
+                      "content": "Monitoring\n\nKPI reporting\n\nAdvisory insights\n\nFleet-level optimization",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772540492667-7gkfb",
+                      "type": "text",
+                      "content": "They typically do not offer:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772540503313-95m5j",
+                      "type": "bullets",
+                      "content": "Structured TRL progression\n\nHybrid-specific load-shift validation\n\nDigital Twin simulation prior to pilot\n\nStandardization ambition",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772540520780-m34ln",
+              "type": "text",
+              "content": "Academic approaches demonstrate advanced control algorithms (MPC, RL, MILP), but lack domain validation and deployment maturity in the yacht sector.\n\nThe intersection of:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540546259-isqmt",
+              "type": "bullets",
+              "content": "Structured TRL acceleration\n\nHybrid yacht specialization\n\nDigital Twin validation\n\nCommercial deployment pathway",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772540561355-muvt2",
+              "type": "text",
+              "content": "is currently unoccupied.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540592588-vpres",
+              "type": "h2",
+              "content": "Strategic Implication",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540611280-jnk32",
+              "type": "text",
+              "content": "The project does not enter a saturated market.\nIt addresses a structural maturity gap.\n\nThe objective is not incremental improvement of monitoring systems, but the creation of a validated maritime energy intelligence layer.\n\nBy progressing from TRL 2 to TRL 6–7 within a structured phase-and-gate framework, the initiative aims to realign technological maturity with domain readiness.\n\nThe strategic goal is to move the DAS from +0.625 (domain-lead mismatch) toward alignment (DAS ≈ 0).",
+              "metadata": {}
+            }
+          ]
+        },
+        {
+          "id": "chapter-1772518678393",
+          "title": "Structured TRL Roadmap",
+          "blocks": [
+            {
+              "id": "block-1772540755893-qd5jk",
+              "type": "h2",
+              "content": "Overview",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540768593-x4fn5",
+              "type": "text",
+              "content": "The project follows a structured TRL acceleration path from:\n\nTRL 2 → TRL 7\n\nwithin the maritime hybrid yacht domain.\n\nThe progression is governed by three decision gates and four development phases.\n\nEach phase has:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540781072-oj9x0",
+              "type": "bullets",
+              "content": "Defined TRL objectives\n\nWork packages\n\nMeasurable deliverables\n\nExplicit gate criteria",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551727464-mqvql",
+              "type": "image",
+              "content": "",
+              "metadata": {
+                "src": "https://storage.googleapis.com/rethink-yachting-web-storage/4phasen.svg",
+                "caption": "Bildunterschrift"
+              }
+            },
+            {
+              "id": "block-1772540790622-uw05m",
+              "type": "text",
+              "content": "The Digital Twin Superyacht (C2D architecture) acts as TRL accelerator between simulation and operational validation.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518698393-dt0vj",
+              "type": "h2",
+              "content": "Phase 1 - Opportunity Mapping",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540822491-nd0h8",
+              "type": "quote-block",
+              "content": "TRL 1 → TRL 2\n\nGate 1: Concept Validation",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540927828-vt15y",
+              "type": "h3",
+              "content": "Objective",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540937445-d5bco",
+              "type": "text",
+              "content": "Translate cross-domain algorithmic principles into a structured maritime system concept.\n\nEstablish theoretical feasibility and system taxonomy.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540950228-22nph",
+              "type": "h3",
+              "content": "Work Packages",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772540969062-briwy",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772540983353-41kkk",
+                    "type": "h3",
+                    "content": "WP1.1 – Maritime Energy System Mapping",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541000336-ja9fv",
+                    "type": "bullets",
+                    "content": "Identify relevant hybrid yacht architectures\n\nDefine system boundaries\n\nCategorize load groups (HVAC, lighting, galley, propulsion support, etc.)\n\nDefine operational modes (harbor, anchor, cruising, peak load)",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541014174-ngh6q",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541014174-e8ynv",
+                    "type": "h3",
+                    "content": "WP1.2 – Data Specification",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541014174-tg7pv",
+                    "type": "bullets",
+                    "content": "Define time-series resolution requirements\n\nDefine measurement granularity\n\nDefine system tagging structure\n\nSpecify normalization framework",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541038719-yb8so",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541038719-xde5q",
+                    "type": "h3",
+                    "content": "WP1.3 – Conceptual Optimization Model",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541038719-wlvx3",
+                    "type": "bullets",
+                    "content": "Define optimization variables\n\nDefine constraints (safety, redundancy, load stability)\n\nIdentify potential load-shift categories\n\nDevelop initial optimization hypotheses",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541085261-os9kz",
+              "type": "h3",
+              "content": "Deliverables",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541095520-ntbfa",
+              "type": "bullets",
+              "content": "Maritime Energy System Taxonomy\n\nLoad Profile Data Specification\n\nConceptual Optimization Framework\n\nInitial Risk Assessment",
+              "metadata": {
+                "listStyle": "numbered"
+              }
+            },
+            {
+              "id": "block-1772541129503-l1fcy",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541136392-ckym7",
+                    "type": "h3",
+                    "content": "Gate 1 Criteria",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541153341-issz9",
+                    "type": "bullets",
+                    "content": "✔ Maritime system structure validated\n✔ Load-shift hypothesis plausible\n✔ Required data sources identified\n✔ At least one potential data partner secured",
+                    "metadata": {
+                      "listStyle": "numbered"
+                    }
+                  },
+                  {
+                    "id": "block-1772541202095-ng486",
+                    "type": "text",
+                    "content": "Gate Decision Outcome:\nProceed to data acquisition and simulation.",
+                    "metadata": {}
+                  }
+                ],
+                "containerBgColor": "#f59e0b",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772518711106-yyek4",
+              "type": "h2",
+              "content": "Phase 2 - Collaborative Prototyping",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541287883-pfa5t",
+              "type": "quote-block",
+              "content": "TRL 3 → TRL 4\n\nGate 2: Simulation Validation",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541299066-4wm65",
+              "type": "h3",
+              "content": "Objective",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541306862-w50dq",
+              "type": "text",
+              "content": "Validate algorithmic feasibility within a simulated maritime environment using real load profiles.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541321730-xehik",
+              "type": "h3",
+              "content": "Work Packages",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541348587-5hhh2",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541358532-400zi",
+                    "type": "h3",
+                    "content": "WP2.1 – Data Acquisition",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541374058-sus81",
+                    "type": "bullets",
+                    "content": "Collect real yacht load profiles (2–5 min resolution)\n\nNormalize time-series\n\nMap systems to defined taxonomy",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541385116-k5n21",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541385116-xlbtp",
+                    "type": "h3",
+                    "content": "WP2.2 – Digital Twin Integration",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541385116-bfci3",
+                    "type": "bullets",
+                    "content": "Integrate load data into C2D architecture\n\nImplement simulation layer\n\nConfigure algorithm parameters",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541410420-9tiqb",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541410420-bb1kn",
+                    "type": "h3",
+                    "content": "WP2.3 – Simulation & Sensitivity Testing",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541410420-c94m2",
+                    "type": "bullets",
+                    "content": "Peak clustering\n\nLoad-shift scenario modeling\n\nGenerator runtime simulations\n\nBattery buffering analysis\n\nVolatility stress testing",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541443266-odnzf",
+              "type": "h3",
+              "content": "Deliverables",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541453025-6w619",
+              "type": "bullets",
+              "content": "Simulation Performance Report\n\nQuantified Load-Shift Potential\n\nGenerator Runtime Reduction Estimate\n\nEconomic Impact Model (preliminary)",
+              "metadata": {
+                "listStyle": "numbered"
+              }
+            },
+            {
+              "id": "block-1772541477578-ollcq",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541481562-b3pz3",
+                    "type": "h3",
+                    "content": "Gate 2 Criteria",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541492582-wgsx7",
+                    "type": "bullets",
+                    "content": "✔ Measurable optimization potential demonstrated\n✔ Algorithm stable under volatile load conditions\n✔ Safety constraints respected\n✔ Candidate pilot yacht identified",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  },
+                  {
+                    "id": "block-1772541506078-13391",
+                    "type": "text",
+                    "content": "Gate Decision Outcome:\nProceed to operational validation.",
+                    "metadata": {}
+                  }
+                ],
+                "containerBgColor": "#f59e0b",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772518725982-0u2yu",
+              "type": "h2",
+              "content": "Phase 3 - Validation at Sea",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541526729-k0cpa",
+              "type": "quote-block",
+              "content": "TRL 5 → TRL 7\n\nGate 3: Operational Validation",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541538841-bmcxr",
+              "type": "h3",
+              "content": "Objective",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541562470-yijq7",
+              "type": "text",
+              "content": "Demonstrate real-world operational viability under live yacht conditions.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541572980-y9ir4",
+              "type": "h3",
+              "content": "Work Packages",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541588362-th0z3",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541596720-8832f",
+                    "type": "h3",
+                    "content": "WP3.1 – Shadow Mode Integration (TRL 5)",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541608179-c8h0k",
+                    "type": "bullets",
+                    "content": "Connect monitoring layer\n\nRun algorithm in advisory mode\n\nCompare simulation vs real operation",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541618070-feikz",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541618070-axqts",
+                    "type": "h3",
+                    "content": "WP3.2 – Assisted Optimization Mode (TRL 6)",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541618070-ctt0x",
+                    "type": "bullets",
+                    "content": "Provide decision support to captain / engineer\n\nEvaluate generator runtime reduction\n\nEvaluate emission impact\n\nMeasure operational stability",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541635962-g3npo",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541635962-09goo",
+                    "type": "h3",
+                    "content": "WP3.3 – Pilot Validation (TRL 7)",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541635962-zmauo",
+                    "type": "bullets",
+                    "content": "Full operational trial\n\nKPI benchmarking\n\nFuel consumption analysis\n\nReliability verification\n\nEconomic validation",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541665770-7isrs",
+              "type": "h3",
+              "content": "Deliverables",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541675371-fa43e",
+              "type": "bullets",
+              "content": "Pilot Validation Report\n\nFuel & Emission Reduction Evidence\n\nOperational Stability Assessment\n\nUpdated Economic Model",
+              "metadata": {
+                "listStyle": "numbered"
+              }
+            },
+            {
+              "id": "block-1772541694891-mpk6d",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541697150-v7cpk",
+                    "type": "h3",
+                    "content": "Gate 3 Criteria",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541706192-1yqtg",
+                    "type": "bullets",
+                    "content": "✔ Measured efficiency improvement confirmed\n✔ Stable operational integration\n✔ No safety compromise\n✔ Scalability potential demonstrated",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  },
+                  {
+                    "id": "block-1772541717604-urfel",
+                    "type": "text",
+                    "content": "Gate Decision Outcome:\nProceed to industrial integration.",
+                    "metadata": {}
+                  }
+                ],
+                "containerBgColor": "#f59e0b",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772518743731-t25sg",
+              "type": "h2",
+              "content": "Phase 4 - Integration & Scaling",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541764116-1a7es",
+              "type": "quote-block",
+              "content": "TRL 8 → TRL 9",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541774692-1r7yo",
+              "type": "h3",
+              "content": "Objective",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541783650-ia1os",
+              "type": "text",
+              "content": "Industrialize and standardize the validated solution.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541793416-4t748",
+              "type": "h3",
+              "content": "Workpackages",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541804841-6w0m2",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541813488-4gicm",
+                    "type": "h3",
+                    "content": "WP4.1 – System Qualification (TRL 8)",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541824604-x72jg",
+                    "type": "bullets",
+                    "content": "Documentation of performance\n\nStandardized integration interfaces\n\nCompatibility framework for shipyards",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541839521-w0alz",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772541839521-vg9r9",
+                    "type": "h3",
+                    "content": "WP4.2 – Commercial Deployment (TRL 9)",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772541839521-urfmc",
+                    "type": "bullets",
+                    "content": "Licensing model definition\n\nYard integration model\n\nService & monitoring structure\n\nSpin-off feasibility assessment",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772541866655-nxqi5",
+              "type": "h3",
+              "content": "Deliverables",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541874588-hilat",
+              "type": "bullets",
+              "content": "Industrial Integration Framework\n\nCommercialization Strategy\n\nPartner Integration Package",
+              "metadata": {
+                "listStyle": "numbered"
+              }
+            },
+            {
+              "id": "block-1772541900221-3i6lz",
+              "type": "h2",
+              "content": "TRL Progression Logic",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772541936250-avr85",
+              "type": "table",
+              "content": "",
+              "metadata": {
+                "tableHeader": true,
+                "tableData": [
+                  [
+                    "Phase",
+                    "TRL Target",
+                    "Core Validation"
+                  ],
+                  [
+                    "Phase 1",
+                    "2",
+                    "Concept structure"
+                  ],
+                  [
+                    "Phase 2",
+                    "4",
+                    "Simulation validation"
+                  ],
+                  [
+                    "Phase 3",
+                    "7",
+                    "Operational validation"
+                  ],
+                  [
+                    "Phase 4",
+                    "9",
+                    "Industrialization"
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772542013257-y5xoh",
+              "type": "h2",
+              "content": "DAS Progression",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542038050-qk0s9",
+              "type": "text",
+              "content": "Initial State:\nTRL 2\nDRL 7\nDAS ≈ +0.625 (Domain-lead mismatch)\n\nTarget After Phase 3:\nTRL 7\nDRL 7–8\nDAS ≈ 0 (Aligned)\n\nStrategic objective:\nMove from opportunity gap to structured alignment.",
+              "metadata": {}
+            }
+          ]
+        },
+        {
+          "id": "chapter-1772518817761",
+          "title": "Partner & Governance Model",
+          "blocks": [
+            {
+              "id": "block-1772542526445-g6etu",
+              "type": "h2",
+              "content": "Partner Structure Overview",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542544258-u76pa",
+              "type": "text",
+              "content": "The project requires a structured multi-actor ecosystem aligned with TRL progression.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542572941-k2ubq",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772542582108-elbxr",
+                      "type": "text",
+                      "content": "Partner roles are defined according to:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542595370-y6yb9",
+                      "type": "bullets",
+                      "content": "Technical contribution\n\nDomain access\n\nValidation authority\n\nCommercial pathway",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542604874-4cnuw",
+                      "type": "text",
+                      "content": "The model separates:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542614033-z6ja6",
+                      "type": "bullets",
+                      "content": "Core Technology Partner\n\nDomain Access Partner\n\nIntegration Partner\n\nValidation Partner\n\nStrategic Commercial Partner",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772542628187-f56b7",
+              "type": "text",
+              "content": "Each role aligns with specific TRL phases.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518829714-59uyj",
+              "type": "h2",
+              "content": "Required Partner Types",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542646683-io1cy",
+              "type": "h3",
+              "content": "Core Technology Partner",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542665928-l5m1k",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772542674287-5jj9a",
+                      "type": "text",
+                      "content": "Role:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542680945-f80c2",
+                      "type": "bullets",
+                      "content": "Provides underlying optimization algorithm\n\nAdapts algorithm to maritime constraints\n\nParticipates in simulation calibration\n\nSupports pilot validation",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542693583-d4ujw",
+                      "type": "text",
+                      "content": "Involved in:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542709629-vgi46",
+                      "type": "highlight",
+                      "content": "Phase 1 - 3",
+                      "metadata": {
+                        "highlightIcon": "✅",
+                        "highlightColor": "#f59e0b",
+                        "highlightOpacity": 0.12
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542728324-vddxj",
+                      "type": "text",
+                      "content": "Value:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542733833-iqogh",
+                      "type": "bullets",
+                      "content": "Access to new high-margin domain\n\nStructured TRL acceleration\n\nJoint IP positioning",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772542763256-uhyc2",
+              "type": "h3",
+              "content": "Shipyard Partner",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542759937-nj6ud",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772542759937-emc0p",
+                      "type": "text",
+                      "content": "Role:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542759937-g2ftt",
+                      "type": "bullets",
+                      "content": "Provides access to hybrid yacht architectures\n\nFacilitates load profile extraction\n\nEnables pilot integration\n\nSupports integration feasibility",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542759937-wae92",
+                      "type": "text",
+                      "content": "Involved in:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542759937-4ga40",
+                      "type": "highlight",
+                      "content": "Phase 2 - 4",
+                      "metadata": {
+                        "highlightIcon": "✅",
+                        "highlightColor": "#f59e0b",
+                        "highlightOpacity": 0.12
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542759937-hvug2",
+                      "type": "text",
+                      "content": "Value:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542759937-mg8z6",
+                      "type": "bullets",
+                      "content": "Differentiation through innovation\n\nEarly positioning in hybrid optimization\n\nStructured performance offering",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772542803183-mxo6z",
+              "type": "h3",
+              "content": "Yacht Owner / Operator",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542801058-wqjmc",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772542801058-jhizc",
+                      "type": "text",
+                      "content": "Role:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542801058-2xoul",
+                      "type": "bullets",
+                      "content": "Provides real operational data\n\nEnables pilot validation\n\nEvaluates operational impact",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542801058-wx3wz",
+                      "type": "text",
+                      "content": "Involved in:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542801058-sscem",
+                      "type": "highlight",
+                      "content": "Phase 2 - 3",
+                      "metadata": {
+                        "highlightIcon": "✅",
+                        "highlightColor": "#f59e0b",
+                        "highlightOpacity": 0.12
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542801058-qoewq",
+                      "type": "text",
+                      "content": "Value:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542801058-9b1xh",
+                      "type": "bullets",
+                      "content": "Fuel reduction potential\n\nReduced generator runtime\n\nEmission transparency\n\nIncreased asset performance",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772542865158-q1wgw",
+              "type": "h3",
+              "content": "System Integrator",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542854899-db91q",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772542854899-o4na3",
+                      "type": "text",
+                      "content": "Role:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542854899-6dgd6",
+                      "type": "bullets",
+                      "content": "Interfaces with onboard systems\n\nEnsures safe integration\n\nSupports monitoring and control layers",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542854899-457da",
+                      "type": "text",
+                      "content": "Involved in:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542854899-ky2g3",
+                      "type": "highlight",
+                      "content": "Phase 3 - 4",
+                      "metadata": {
+                        "highlightIcon": "✅",
+                        "highlightColor": "#f59e0b",
+                        "highlightOpacity": 0.12
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542854899-cliwk",
+                      "type": "text",
+                      "content": "Value:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542854899-p20j1",
+                      "type": "bullets",
+                      "content": "Early involvement in advanced control logic\n\nPotential long-term integration contracts",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772542909217-x8tru",
+              "type": "h3",
+              "content": "Academic / Validation Partner",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772542906116-6rzzx",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772542906116-s8vuo",
+                      "type": "text",
+                      "content": "Role:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542906116-8wta3",
+                      "type": "bullets",
+                      "content": "Supports simulation validation\n\nProvides independent evaluation\n\nStrengthens funding eligibility",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542906116-olbpk",
+                      "type": "text",
+                      "content": "Involved in:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542906116-4hiz8",
+                      "type": "highlight",
+                      "content": "Phase 2 - 3",
+                      "metadata": {
+                        "highlightIcon": "✅",
+                        "highlightColor": "#f59e0b",
+                        "highlightOpacity": 0.12
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772542906116-3tytd",
+                      "type": "text",
+                      "content": "Value:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772542906116-eib6j",
+                      "type": "bullets",
+                      "content": "Applied research opportunity\n\nPublication potential\n\nTechnology transfer impact",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772542968606-bucvh",
+              "type": "h2",
+              "content": "Governance Structure",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543009770-3c047",
+              "type": "h3",
+              "content": "Steering Committee",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543025899-ccf4c",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772543030675-m4sox",
+                      "type": "text",
+                      "content": "Composition:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543040800-x5fhh",
+                      "type": "bullets",
+                      "content": "Core Technology Partner\n\nre:think yachting (Project Lead)\n\nShipyard representative\n\nOptional funding observer",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772543050438-rd7hu",
+                      "type": "text",
+                      "content": "Responsibilities:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543061122-injr6",
+                      "type": "bullets",
+                      "content": "Gate approval decisions\n\nResource allocation\n\nRisk assessment\n\nPhase transition approval",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772543081967-5zlg8",
+              "type": "h3",
+              "content": "Technical Working Group",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543080025-xcmq5",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772543080025-c84zs",
+                      "type": "text",
+                      "content": "Composition:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543080025-6f0qn",
+                      "type": "bullets",
+                      "content": "Data engineers\n\nAlgorithm developers\n\nSystem integrators\n\nSimulation engineers",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772543080025-uajfo",
+                      "type": "text",
+                      "content": "Responsibilities:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543080025-b9e3u",
+                      "type": "bullets",
+                      "content": "Implementation\n\nValidation\n\nTechnical documentation",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772543118967-61wjm",
+              "type": "h3",
+              "content": "Operational Pilot Board (Phase 3)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543116633-9bkss",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772543116633-a5mo7",
+                      "type": "text",
+                      "content": "Composition:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543116633-ksts9",
+                      "type": "bullets",
+                      "content": "Captain / Chief Engineer\n\nShipyard technical representative\n\nSystem integrator\n\nProject technical lead",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772543116633-j862i",
+                      "type": "text",
+                      "content": "Responsibilities:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543116633-8tc97",
+                      "type": "bullets",
+                      "content": "Operational risk review\n\nLive pilot supervision\n\nPerformance review",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772543179063-a3qpr",
+              "type": "h2",
+              "content": "Gate-Based Decision Logic",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543202159-cxqj1",
+              "type": "text",
+              "content": "Each gate requires:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543214217-0peco",
+              "type": "bullets",
+              "content": "Deliverable submission\n\nRisk review\n\nPerformance validation\n\nFinancial feasibility assessment",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772543228784-65l6e",
+              "type": "text",
+              "content": "Gate decisions may result in:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543244900-1dqdv",
+              "type": "bullets",
+              "content": "Progression\n\nConditional revision\n\nProject restructuring",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772543258289-odgpn",
+              "type": "text",
+              "content": "No automatic phase transition.\nThis preserves TRL integrity.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518851173-134au",
+              "type": "h2",
+              "content": "Intellectual Property Framework",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543315275-z4p0z",
+              "type": "text",
+              "content": "IP model must respect:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543343192-14wp6",
+              "type": "bullets",
+              "content": "Existing algorithm ownership\n\nMaritime adaptation contribution\n\nJoint development rights\n\nCommercial exploitation pathway",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772543357138-0use4",
+              "type": "text",
+              "content": "Suggested baseline:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543381350-b242h",
+              "type": "bullets",
+              "content": "Core algorithm IP remains with technology partner\n\nMaritime domain adaptation may be: Joint IP, Licensed IP, Project-specific IP",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772543430379-8jiv4",
+              "type": "text",
+              "content": "Commercialization pathways defined at Phase 4.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518863456-1z9be",
+              "type": "h2",
+              "content": "Governance Model",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543476125-yky6z",
+              "type": "text",
+              "content": "Principles:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543492838-wuiph",
+              "type": "bullets",
+              "content": "Yacht data remains property of owner\n\nAnonymization for analysis\n\nSecure storage\n\nAccess limited to project scope\n\nNo uncontrolled redistribution",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772543505488-wzxwu",
+              "type": "text",
+              "content": "Digital Twin (C2D) operates under controlled compute-to-data architecture.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543522367-bc3s1",
+              "type": "h2",
+              "content": "Funding & Financial Model (Optional Layer)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543596855-748j3",
+              "type": "text",
+              "content": "Depending on structure:\n\nOption A – Self-funded pilot\nOption B – Public funding (TRL acceleration logic fits strongly)\nOption C – Hybrid co-financing\n\nFinancial governance tied to phase progression.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543616692-dk4ge",
+              "type": "h2",
+              "content": "Risk Allocation Principles",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543639954-o8hp1",
+              "type": "text",
+              "content": "Technical Risk:\nShared between technology and integration partners.\n\nOperational Risk:\nShared with pilot yacht under structured monitoring.\n\nCommercial Risk:\nDeferred until TRL 6+ validation.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543646429-hc7gn",
+              "type": "h2",
+              "content": "Strategic Positioning",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543663976-t0r2j",
+              "type": "text",
+              "content": "The governance model ensures:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543676042-srcm3",
+              "type": "bullets",
+              "content": "Structured maturation\n\nRisk-managed progression\n\nControlled IP development\n\nAlignment with TRL logic\n\nScalability beyond first pilot",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772543687071-dv6vr",
+              "type": "text",
+              "content": "This is not a loose consortium.\nIt is a phase-driven acceleration architecture.",
+              "metadata": {}
+            }
+          ]
+        },
+        {
+          "id": "chapter-1772518877431",
+          "title": "Impact & Economics",
+          "blocks": [
+            {
+              "id": "block-1772518902685-haa4i",
+              "type": "h2",
+              "content": "Economic Rationale",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543769741-3felx",
+              "type": "text",
+              "content": "Hybrid yacht energy systems represent high-capex assets with ongoing operational expenditure driven by:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543779053-6ccsr",
+              "type": "bullets",
+              "content": "Fuel consumption\n\nGenerator runtime\n\nMaintenance cycles\n\nSystem inefficiencies\n\nEmission-related costs",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772543789682-57vnu",
+              "type": "text",
+              "content": "Despite increasing system complexity, operational optimization remains largely manual or rule-based.\n\nThis project introduces algorithmic intelligence to convert system complexity into measurable economic performance.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518916535-3o7zq",
+              "type": "h2",
+              "content": "Economic Impact Dimensions",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543833865-kczkg",
+              "type": "h3",
+              "content": "Fuel Consumption Reduction",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543852748-nnm0z",
+              "type": "text",
+              "content": "Through load-shift optimization and generator runtime smoothing:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543861140-h9a71",
+              "type": "bullets",
+              "content": "Reduced peak-driven inefficiencies\n\nImproved load factor utilization\n\nReduced unnecessary generator cycling",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772543871857-m254v",
+              "type": "text",
+              "content": "Expected impact range (to be validated in Phase 2–3):\n\n5–15% generator fuel reduction potential depending on architecture",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543888707-lvi2r",
+              "type": "h3",
+              "content": "Generator Runtime Optimization",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543916957-k7z7s",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772543922940-ijnpe",
+                      "type": "text",
+                      "content": "Optimized dispatch reduces:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543932819-145a9",
+                      "type": "bullets",
+                      "content": "Low-load operation (inefficient burn rates)\n\nRedundant generator activation\n\nMaintenance stress",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772543940707-duvtg",
+                      "type": "text",
+                      "content": "Impact:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543949286-fvunj",
+                      "type": "bullets",
+                      "content": "Extended service intervals\n\nReduced maintenance cost\n\nIncreased system lifespan",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772543968478-wdwk2",
+              "type": "h3",
+              "content": "Battery Utilization Efficiency",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772543966102-y90mk",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772543966102-kcp56",
+                      "type": "text",
+                      "content": "Improved charge/discharge coordination:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543966102-v9l1n",
+                      "type": "bullets",
+                      "content": "Enhanced peak buffering\n\nReduced deep discharge cycles\n\nIncreased battery longevity",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772543966102-d34oa",
+                      "type": "text",
+                      "content": "Impact:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772543966102-i531t",
+                      "type": "bullets",
+                      "content": "Deferred battery replacement\n\nImproved ROI on hybrid investment",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772544014724-dreld",
+              "type": "h3",
+              "content": "Operational Decision Support",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544012615-ehmiv",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772544012615-b0f2w",
+                      "type": "text",
+                      "content": "Reduced cognitive load on crew:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772544012615-i88c7",
+                      "type": "bullets",
+                      "content": "Structured advisory support\n\nData-backed operational decisions\n\nTransparent performance benchmarking",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772544012615-mjjwe",
+                      "type": "text",
+                      "content": "Impact:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772544012615-6tsri",
+                      "type": "bullets",
+                      "content": "Reduced operational uncertainty\n\nIncreased reliability\n\nProfessionalization of energy management",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772544075957-0kpc6",
+              "type": "h2",
+              "content": "Economic Model Development",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544100323-dbg78",
+              "type": "text",
+              "content": "Economic validation will be structured in three steps:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544123870-55b3v",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772544129211-j5r4k",
+                      "type": "text",
+                      "content": "Phase 2:",
+                      "metadata": {}
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772544136336-zwfia",
+                      "type": "bullets",
+                      "content": "Simulation-based cost impact estimation\n\nSensitivity analysis",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772544145523-d94c8",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772544145523-46h7w",
+                      "type": "text",
+                      "content": "Phase 3:",
+                      "metadata": {}
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772544145523-54eci",
+                      "type": "bullets",
+                      "content": "Measured real-world impact\n\nKPI benchmarking",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772544157719-09wr2",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772544157719-gyjtr",
+                      "type": "text",
+                      "content": "Phase 4:",
+                      "metadata": {}
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772544157719-1o895",
+                      "type": "bullets",
+                      "content": "Standardized economic model for replication",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772544180156-pe0qf",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772544180157-dmof1",
+                      "type": "text",
+                      "content": "Economic metrics include:",
+                      "metadata": {}
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772544180157-uv6ds",
+                      "type": "bullets",
+                      "content": "Fuel cost savings\n\nMaintenance cost reduction\n\nEmission-related cost avoidance\n\nReturn-on-investment timeframe",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772544200865-0rqlk",
+              "type": "h2",
+              "content": "ESG Alignment",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544209778-3poie",
+              "type": "text",
+              "content": "The initiative directly supports environmental performance improvement through structured efficiency gains.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544256882-yqumm",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772544268353-melw2",
+                    "type": "h3",
+                    "content": "Environmental Impact",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772544286445-myuw1",
+                    "type": "text",
+                    "content": "Potential measurable impact areas:",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772544295765-mu9pv",
+                    "type": "bullets",
+                    "content": "CO₂ emission reduction\n\nNOx emission reduction\n\nReduced fuel burn\n\nLower idle runtime",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  },
+                  {
+                    "id": "block-1772544306870-m4n70",
+                    "type": "text",
+                    "content": "All environmental metrics will be derived from measured fuel consumption and runtime data during Phase 3 validation.",
+                    "metadata": {}
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772544316823-ypk9x",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772544316823-nt2fq",
+                    "type": "h3",
+                    "content": "Governance Alignment",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772544316823-gu21n",
+                    "type": "text",
+                    "content": "The structured TRL progression ensures:",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772544316823-kwnkl",
+                    "type": "bullets",
+                    "content": "Controlled risk management\n\nMeasurable advancement criteria\n\nTransparent performance reporting\n\nTraceable validation logic",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  },
+                  {
+                    "id": "block-1772544316823-e9yxx",
+                    "type": "text",
+                    "content": "This aligns with responsible innovation governance principles.",
+                    "metadata": {}
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772544362703-6tvva",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772544362703-qeste",
+                    "type": "h3",
+                    "content": "Long-Term Industry Impact",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772544362703-ka37s",
+                    "type": "text",
+                    "content": "If validated, the project establishes:",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772544362703-tg70j",
+                    "type": "bullets",
+                    "content": "A repeatable hybrid yacht optimization framework\n\nStandardized energy intelligence layer\n\nFoundation for performance-based contracting models\n\nBasis for classification discussions",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  },
+                  {
+                    "id": "block-1772544362703-3p3p4",
+                    "type": "text",
+                    "content": "The impact extends beyond individual yachts toward structured industry maturation.",
+                    "metadata": {}
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772518925044-mkfgy",
+              "type": "h2",
+              "content": "Strategic ESG Positioning",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544431003-qpn6y",
+              "type": "text",
+              "content": "The project does not position itself as a sustainability narrative initiative.\n\nIt positions itself as:\n\nA structured efficiency validation program\nwith measurable environmental side effects.\n\nEfficiency is the primary driver.\nEmission reduction is the systemic consequence.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544451128-ukyo6",
+              "type": "h2",
+              "content": "Funding Alignment Potential",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544465811-a0mqc",
+              "type": "text",
+              "content": "The project aligns with funding criteria that prioritize:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544476790-fxwac",
+              "type": "bullets",
+              "content": "Decarbonization\n\nEnergy efficiency\n\nTechnology transfer\n\nDigital transformation\n\nIndustrial competitiveness",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772544488361-8237t",
+              "type": "text",
+              "content": "The TRL-based structure strengthens funding eligibility by:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544497982-s2fu6",
+              "type": "bullets",
+              "content": "Demonstrating controlled maturity progression\n\nProviding measurable milestones\n\nStructuring public-private collaboration",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772544510398-vlocp",
+              "type": "h2",
+              "content": "Impact Summary",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772544550586-9ciqk",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772544982766-372qn",
+                    "type": "h3",
+                    "content": "Economic Impact:",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772545004044-8qebn",
+                    "type": "bullets",
+                    "content": "Fuel savings\n\nRuntime optimization\n\nMaintenance reduction\n\nAsset value increase",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772545018990-c7uvt",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772545018990-btxq1",
+                    "type": "h3",
+                    "content": "Environmental Impact:",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772545018990-0tuyu",
+                    "type": "bullets",
+                    "content": "Emission reduction\n\nReduced resource consumption",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            },
+            {
+              "id": "block-1772545048557-twxuy",
+              "type": "container",
+              "content": "",
+              "metadata": {
+                "containerBlocks": [
+                  {
+                    "id": "block-1772545048557-x9h46",
+                    "type": "h3",
+                    "content": "Structural Impact:",
+                    "metadata": {}
+                  },
+                  {
+                    "id": "block-1772545048557-2bwrg",
+                    "type": "bullets",
+                    "content": "Standardization potential\n\nIndustry positioning\n\nFirst-mover advantage",
+                    "metadata": {
+                      "listStyle": "bullets"
+                    }
+                  }
+                ],
+                "containerBgColor": "#e6e6e6",
+                "containerOpacity": 0.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "chapter-1772518949306",
+          "title": "Risk & Mitigation",
+          "blocks": [
+            {
+              "id": "block-1772518959356-gs8rj",
+              "type": "h2",
+              "content": "Risk Philosophy",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772549824466-gn781",
+              "type": "text",
+              "content": "The project follows a structured TRL acceleration model.\n\nRisk is not eliminated.\nRisk is staged, isolated, and reduced through phase-based validation and gate control.\n\nEach phase increases exposure in a controlled manner:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772549833170-xfkhs",
+              "type": "bullets",
+              "content": "Phase 1: Conceptual risk only\n\nPhase 2: Simulation risk\n\nPhase 3: Operational risk\n\nPhase 4: Commercial risk",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772549845315-zovun",
+              "type": "text",
+              "content": "This staged structure ensures proportional escalation.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772518971277-hfwmq",
+              "type": "h2",
+              "content": "Technical Risks",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772549872236-i64s2",
+              "type": "h3",
+              "content": "Data Quality Risk",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772549894786-bruoe",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772549901519-8rwq9",
+                      "type": "text",
+                      "content": "Risk",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772549906829-tjgmw",
+                      "type": "bullets",
+                      "content": "Incomplete or inconsistent load profiles\n\nInsufficient resolution\n\nMissing system granularity",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772549916661-vsotr",
+                      "type": "text",
+                      "content": "Impact",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772549927128-691vw",
+                      "type": "bullets",
+                      "content": "Simulation distortion\n\nFalse optimization assumptions",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772549938224-fo56v",
+                      "type": "text",
+                      "content": "Mitigation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772549944924-u9876",
+                      "type": "bullets",
+                      "content": "Clear data specification (2–5 min intervals)\n\nSystem taxonomy normalization\n\nData cleaning and validation protocol\n\nMinimum 7–14 day datasets required\n\nSensitivity testing in Phase 2",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772549966753-qb7fw",
+              "type": "highlight",
+              "content": "Risk Level: Medium (Phase 2)\nReduced after Gate 2 validation.",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772549996248-z1tfw",
+              "type": "h3",
+              "content": "Algorithm Transfer Risk",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550011707-fqodh",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772550011707-lu1oc",
+                      "type": "text",
+                      "content": "Risk",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550011707-vliue",
+                      "type": "bullets",
+                      "content": "Building-domain algorithm may not adapt to maritime volatility\n\nInstability under dynamic load conditions",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550011707-dkha9",
+                      "type": "text",
+                      "content": "Impact",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550011707-vdnbw",
+                      "type": "bullets",
+                      "content": "Unreliable optimization\n\nUnsafe operational suggestions",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550011707-rncf6",
+                      "type": "text",
+                      "content": "Mitigation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550011707-qyxqk",
+                      "type": "bullets",
+                      "content": "Simulation-first validation\n\nStress testing under extreme load volatility\n\nConstraint-based optimization (safety first)\n\nAdvisory mode before active control",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772550089661-enukl",
+              "type": "highlight",
+              "content": "Risk Level: Medium–High (Phase 2)\nReduced after controlled pilot.",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772550095678-wtgfl",
+              "type": "h3",
+              "content": "System Integration Risk",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550082103-18tqw",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772550082103-qr5m8",
+                      "type": "text",
+                      "content": "Risk",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550082103-tc1ai",
+                      "type": "bullets",
+                      "content": "Incompatibility with onboard systems\n\nCommunication protocol limitations\n\nIntegration complexity",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550082103-01ppp",
+                      "type": "text",
+                      "content": "Impact",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550082103-wuwfx",
+                      "type": "bullets",
+                      "content": "Delays in pilot\n\nTechnical friction",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550082103-63rra",
+                      "type": "text",
+                      "content": "Mitigation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550082103-7k3s5",
+                      "type": "bullets",
+                      "content": "Monitoring layer first (shadow mode)\n\nNo direct system override in early phases\n\nClose cooperation with integrator\n\nModular integration architecture",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772550059473-7j34w",
+              "type": "highlight",
+              "content": "Risk Level: Medium (Phase 3)\nReduced at TRL 6.",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772518981110-8qpnr",
+              "type": "h2",
+              "content": "Operational Risks",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550191628-6onlv",
+              "type": "h3",
+              "content": "Safety Risk",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550177303-meepb",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772550177303-nc2nd",
+                      "type": "text",
+                      "content": "Risk",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550177303-xppkb",
+                      "type": "bullets",
+                      "content": "Optimization conflicts with redundancy principles\n\nUnintended system instability",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550177303-677oi",
+                      "type": "text",
+                      "content": "Impact",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550177303-m05i1",
+                      "type": "bullets",
+                      "content": "Operational disruption\n\nSafety compromise",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550177303-m8zqw",
+                      "type": "text",
+                      "content": "Mitigation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550177303-3w3uf",
+                      "type": "bullets",
+                      "content": "Advisory mode only in early pilot\n\nNo override of safety-critical systems\n\nManual confirmation requirement\n\nOperational review board (Phase 3)",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772550183554-u8e9l",
+              "type": "highlight",
+              "content": "Risk Level: Controlled\nNo direct autonomous control in early TRLs.",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772550255907-gqxhq",
+              "type": "h3",
+              "content": "Crew Acceptance Risk",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550241636-yor74",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772550241636-3kzxh",
+                      "type": "text",
+                      "content": "Risk",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550241636-l3f3j",
+                      "type": "bullets",
+                      "content": "Resistance to algorithmic recommendations\n\nPerceived loss of operational autonomy",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550241636-qgk7m",
+                      "type": "text",
+                      "content": "Impact",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550241636-0v9rx",
+                      "type": "bullets",
+                      "content": "Limited adoption\n\nUnderutilization",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550241636-eqfwx",
+                      "type": "text",
+                      "content": "Mitigation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550241636-o0tha",
+                      "type": "bullets",
+                      "content": "Transparent advisory logic\n\nData-backed explanations\n\nCaptain / Chief Engineer involvement in pilot design\n\nFeedback integration loop",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772550248778-828x2",
+              "type": "highlight",
+              "content": "Risk Level: Medium\nReduced through early engagement.",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772518998244-hdgf6",
+              "type": "h2",
+              "content": "Commercial Risks",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550325560-araf4",
+              "type": "h3",
+              "content": "Insufficient Measurable Impact",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550312960-3a9d3",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772550312960-6cop0",
+                      "type": "text",
+                      "content": "Risk",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550312960-htxtv",
+                      "type": "bullets",
+                      "content": "Fuel savings lower than expected\n\nLimited economic justification",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550312960-tjtlp",
+                      "type": "text",
+                      "content": "Impact",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550312960-bo3wh",
+                      "type": "bullets",
+                      "content": "Weak commercialization case",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550312960-r0947",
+                      "type": "text",
+                      "content": "Mitigation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550312960-fe4ay",
+                      "type": "bullets",
+                      "content": "Early sensitivity modeling\n\nMulti-yacht data comparison\n\nScenario-based optimization\n\nConservative ROI framing",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772550318885-i3yel",
+              "type": "highlight",
+              "content": "Risk Level: Medium\nClarified at Gate 2 and Gate 3.",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772550390668-nzqnx",
+              "type": "h3",
+              "content": "Market Timing Risk",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550382043-7w9de",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772550382043-j6a16",
+                      "type": "text",
+                      "content": "Risk",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550382043-kerj2",
+                      "type": "bullets",
+                      "content": "Hybrid adoption slower than expected\n\nShipyards deprioritize innovation",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550382043-0pnyp",
+                      "type": "text",
+                      "content": "Impact",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550382043-hszkq",
+                      "type": "bullets",
+                      "content": "Delayed scaling",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550382043-83ent",
+                      "type": "text",
+                      "content": "Mitigation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550382043-tbzry",
+                      "type": "bullets",
+                      "content": "Focus on early adopters\n\nRefit market entry\n\nPerformance-based positioning\n\nModular deployment model",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772550385794-p5cn9",
+              "type": "highlight",
+              "content": "Risk Level: Moderate\nLong-term structural trend remains positive.",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772550440214-0qb4d",
+              "type": "h2",
+              "content": "Funding Risk",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550463589-5q7uc",
+              "type": "h3",
+              "content": "Phase Transition Funding Gap",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550451880-jrycc",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 3,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772550451880-5xlyh",
+                      "type": "text",
+                      "content": "Risk",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550451880-znhyr",
+                      "type": "bullets",
+                      "content": "Insufficient funding to move from TRL 4 to TRL 6",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550451880-uogwf",
+                      "type": "text",
+                      "content": "Impact",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550451880-ywbc2",
+                      "type": "bullets",
+                      "content": "Delayed scaling",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772550451880-pdbrr",
+                      "type": "text",
+                      "content": "Mitigation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550451880-lrsvo",
+                      "type": "bullets",
+                      "content": "Clear Gate 2 deliverables\n\nQuantified impact evidence\n\nStructured funding application timing\n\nModular project structuring",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772550457206-93o6s",
+              "type": "highlight",
+              "content": "Risk Level: Moderate\nLong-term structural trend remains positive.",
+              "metadata": {
+                "highlightIcon": "💡",
+                "highlightColor": "#f59e0b",
+                "highlightOpacity": 0.12
+              }
+            },
+            {
+              "id": "block-1772550538002-1kvv5",
+              "type": "h2",
+              "content": "TRL-Based Risk Reduction Strategy",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550559093-adza2",
+              "type": "text",
+              "content": "The project intentionally increases exposure in controlled increments.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550569488-6ze1i",
+              "type": "table",
+              "content": "",
+              "metadata": {
+                "tableHeader": true,
+                "tableData": [
+                  [
+                    "Phase",
+                    "Primary Risk",
+                    "Control Mechanism"
+                  ],
+                  [
+                    "Phase 1",
+                    "Conceptual mismatch",
+                    "Limited scope, documentation"
+                  ],
+                  [
+                    "Phase 2",
+                    "Simulation error",
+                    "Stress testing, validation metrics"
+                  ],
+                  [
+                    "Phase 3",
+                    "Operational instability",
+                    "Advisory mode, pilot control"
+                  ],
+                  [
+                    "Phase 4",
+                    "Commercial scalability",
+                    "Standardization framework"
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772550706997-13hor",
+              "type": "h2",
+              "content": "Residual Risk Profile",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550721922-c3vnu",
+              "type": "text",
+              "content": "After Phase 3 (TRL 7):",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550733047-whlmy",
+              "type": "bullets",
+              "content": "Technical risk significantly reduced\n\nOperational risk validated\n\nCommercial risk quantifiable\n\nRegulatory risk assessable",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772550744422-u05gq",
+              "type": "text",
+              "content": "Remaining risk primarily market adoption and scaling execution.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550759506-vn49g",
+              "type": "h2",
+              "content": "Strategic Risk Position",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550774297-mbm5j",
+              "type": "text",
+              "content": "This project does not introduce radical technological uncertainty.\n\nIt introduces structured domain transfer risk,\nwhich is mitigated through:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550784014-melje",
+              "type": "bullets",
+              "content": "Phase logic\n\nGate criteria\n\nControlled exposure\n\nMeasurable progression",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772550794461-n2mso",
+              "type": "text",
+              "content": "Risk is not assumed.\nIt is engineered.",
+              "metadata": {}
+            }
+          ]
+        },
+        {
+          "id": "chapter-1772519017322",
+          "title": "Appendix",
+          "blocks": [
+            {
+              "id": "block-1772519025464-3sbb9",
+              "type": "h2",
+              "content": "Data Acquisition Framework",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550914364-ljaec",
+              "type": "h3",
+              "content": "Objective",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519185956-0w73q",
+              "type": "text",
+              "content": "Enable structured simulation and validation of load-shift potential within hybrid yacht energy systems.\n\nData must allow:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550936139-hevmm",
+              "type": "bullets",
+              "content": "Peak detection\n\nGenerator runtime analysis\n\nLoad clustering\n\nBattery buffering simulation\n\nVolatility stress testing",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772519037248-nazwd",
+              "type": "h2",
+              "content": "Time-Series Data Requirements",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550964126-8h5h4",
+              "type": "h3",
+              "content": "Temporal Resolution",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772550985164-1631y",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772550988226-zg6dg",
+                      "type": "text",
+                      "content": "Required:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772550998497-sdpxw",
+                      "type": "bullets",
+                      "content": "Sampling interval: 2–5 minutes\n\nContinuous time-series\n\nMinimum duration: 7–14 consecutive days\n\nUTC timestamp preferred",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772551009256-avzev",
+                      "type": "text",
+                      "content": "Optional but recommended:\nDistinct datasets for:",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772551035155-gosw5",
+                      "type": "bullets",
+                      "content": "Harbor mode\n\nAnchor mode\n\nCruising mode\n\nHigh hotel-load operation",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772551048252-8qjhl",
+              "type": "h3",
+              "content": "Measurement Resolution",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551069235-4cwgi",
+              "type": "text",
+              "content": "Energy measurement:\n\n≥ 0.1 Wh resolution\n\nor\n\nPower measurement:\n\nWatt-level resolution\n\nAccurate representation of load fluctuations\n\nNo daily aggregates.\nNo pre-smoothed datasets.\n\nOriginal measured values only.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519053247-ema3r",
+              "type": "h2",
+              "content": "System-Level Granularity",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551100847-igay5",
+              "type": "text",
+              "content": "Time-series must be separated by system category.\n\nMinimum required categories:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551118893-s2g6z",
+              "type": "bullets",
+              "content": "HVAC / Chiller\n\nHeating\n\nDomestic hot water\n\nLighting\n\nGalley\n\nNavigation systems\n\nEntertainment systems\n\nHotel load (aggregated if necessary)\n\nGenerator 1 (power output)\n\nGenerator 2 (if applicable)\n\nBattery charge\n\nBattery discharge\n\nShore power\n\nPhotovoltaic input (if available)",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551137155-y2via",
+              "type": "text",
+              "content": "Higher granularity improves simulation accuracy.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772519067572-rggfg",
+              "type": "h2",
+              "content": "Data Structure Format",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551174993-olbl4",
+              "type": "text",
+              "content": "Preferred format: CSV or structured Excel.\n\nMinimum structure:\n\n| timestamp (UTC) | vessel_id | operating_mode | system | power_W | energy_Wh |\n\nWhere:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551186409-5qw6q",
+              "type": "bullets",
+              "content": "timestamp – ISO 8601 format\n\nvessel_id – anonymized identifier\n\noperating_mode – harbor / anchor / cruising\n\nsystem – standardized taxonomy\n\npower_W – instantaneous power\n\nenergy_Wh – interval energy consumption",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551203451-tzeza",
+              "type": "text",
+              "content": "Missing values must be NULL, not zero.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551214139-gvdgz",
+              "type": "h2",
+              "content": "Metadata Requirements",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551225997-ujejh",
+              "type": "text",
+              "content": "Each dataset must include system metadata:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551236418-5u4j3",
+              "type": "bullets",
+              "content": "Vessel length (LOA)\n\nHybrid configuration type\n\nGenerator rated capacity (kW)\n\nBattery capacity (kWh)\n\nBattery chemistry (optional)\n\nShore power rating\n\nPV capacity (if installed)",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551258372-daku4",
+              "type": "text",
+              "content": "Optional but valuable:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551267101-dos08",
+              "type": "bullets",
+              "content": "Engine room layout constraints\n\nRedundancy configuration\n\nOperational duty cycle description",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772552139368-dhqqd",
+              "type": "h3",
+              "content": "Sample Data Set",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772552156739-qwokj",
+              "type": "table",
+              "content": "",
+              "metadata": {
+                "tableHeader": true,
+                "tableData": [
+                  [
+                    "timestamp (UTC)",
+                    "vessel_id",
+                    "operating_mode",
+                    "system",
+                    "power_W",
+                    "energy_Wh"
+                  ],
+                  [
+                    "2026-02-21T10:00:00Z",
+                    "SY001",
+                    "harbor",
+                    "hvac",
+                    "1250",
+                    "41.7"
+                  ],
+                  [
+                    "2026-02-21T10:00:00Z",
+                    "SY001",
+                    "harbor",
+                    "lighting",
+                    "320",
+                    "10.7"
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772551313176-4ymgt",
+              "type": "h2",
+              "content": "Digital Twin Superyacht Integration Requirements",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551360593-j4ua8",
+              "type": "text",
+              "content": "For simulation in C2D architecture:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551369451-gasex",
+              "type": "bullets",
+              "content": "Normalized system taxonomy\n\nTimestamp consistency\n\nTime alignment across systems\n\nNo interpolation before ingestion\n\nDocumented measurement sources",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551381239-wtofs",
+              "type": "text",
+              "content": "Simulation environment must support:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551391609-sc2f7",
+              "type": "bullets",
+              "content": "Generator dispatch modeling\n\nLoad reallocation logic\n\nBattery dispatch constraints\n\nMinimum load constraints\n\nSafety boundaries",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551402885-0puy6",
+              "type": "h2",
+              "content": "TRL Validation Criteria (Technical)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551431889-gbhb3",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772551435290-eb9ul",
+                      "type": "h3",
+                      "content": "TRL 3 Validation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772551448359-tsjd6",
+                      "type": "bullets",
+                      "content": "Successful ingestion of real yacht data\n\nStable normalization\n\nReproducible load clustering",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772551458085-12qjc",
+                      "type": "h3",
+                      "content": "TRL 4 Validation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772551470751-flq71",
+                      "type": "bullets",
+                      "content": "Stable simulation under load volatility\n\nNo constraint violations\n\nQuantified shift potential",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772551479180-pg00i",
+              "type": "columns",
+              "content": "",
+              "metadata": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "id": "block-1772551479180-fdtwz",
+                      "type": "h3",
+                      "content": "TRL 5-6 Validation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772551479180-etm6f",
+                      "type": "bullets",
+                      "content": "Shadow mode correlation ≥ defined threshold\n\nRuntime deviation within acceptable margin\n\nNo safety-critical event triggered",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "id": "block-1772551479180-p0466",
+                      "type": "h3",
+                      "content": "TRL 7 Validation",
+                      "metadata": {}
+                    },
+                    {
+                      "id": "block-1772551479180-irmy1",
+                      "type": "bullets",
+                      "content": "Measurable generator runtime reduction\n\nMeasurable fuel reduction\n\nOperational stability confirmed",
+                      "metadata": {
+                        "listStyle": "bullets"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "block-1772551519497-qfrw1",
+              "type": "h2",
+              "content": "Cybersecurity & Data Governance",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551535676-owdm6",
+              "type": "bullets",
+              "content": "Secure data transfer protocol\n\nRestricted access environment\n\nNo external redistribution\n\nAnonymization by default\n\nCompute-to-data principle applied",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551546143-81ofv",
+              "type": "h2",
+              "content": "Scalability Considerations",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551560684-uttcp",
+              "type": "text",
+              "content": "The technical architecture must support:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551570488-a278g",
+              "type": "bullets",
+              "content": "Multi-vessel datasets\n\nCross-vessel benchmarking\n\nFleet-level pattern comparison\n\nParameterized adaptation per yacht class",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551583055-22fmf",
+              "type": "text",
+              "content": "The system must remain modular.\n\nNo hard-coded yacht-specific dependencies.",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551599893-2c24j",
+              "type": "h2",
+              "content": "Future Technical Extensions (Phase 4+)",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551623447-ps1f2",
+              "type": "text",
+              "content": "Potential extensions after TRL 7:",
+              "metadata": {}
+            },
+            {
+              "id": "block-1772551633359-q58mp",
+              "type": "bullets",
+              "content": "Predictive load forecasting\n\nWeather-influenced dispatch\n\nReinforcement learning modules\n\nClass-compliant integration\n\nAutonomous advisory mode",
+              "metadata": {
+                "listStyle": "bullets"
+              }
+            },
+            {
+              "id": "block-1772551644143-c15hh",
+              "type": "text",
+              "content": "These extensions are outside initial scope.",
+              "metadata": {}
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "title": "Neues Dossier",
+        "reportType": "dossier",
+        "author": "Burkhard List",
+        "paperFormat": "A4",
+        "orientation": "portrait",
+        "marginTop": 20,
+        "marginBottom": 20,
+        "marginLeft": 15,
+        "marginRight": 15,
+        "fontFamily": "'Inter', sans-serif",
+        "headingFontFamily": "'Inter', sans-serif",
+        "baseFontSize": 14,
+        "accentColor": "#002b36",
+        "textColor": "#1a1a1a",
+        "backgroundColor": "#ffffff",
+        "pageNumbering": true,
+        "headerFooterEnabled": true,
+        "tocEnabled": true,
+        "coverPageEnabled": true,
+        "layoutVariant": "default",
+        "tocPosition": "after-cover",
+        "storageConfig": {
+          "projectId": "",
+          "bucketName": "",
+          "region": "europe-west3",
+          "enabled": false
+        },
+        "sidebarBrandLine1": "re:think yachting",
+        "sidebarBrandLine2": "report & dossier studio",
+        "sidebarFooterText": "re:think yachting UG - Hamburg",
+        "reportFooterText": "Mastery re:engineered."
+      },
+      "createdAt": "2026-03-03T06:11:19.794Z",
+      "updatedAt": "2026-03-04T06:42:32.320Z"
+    }
+  ]
+}

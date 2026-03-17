@@ -5,7 +5,11 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0 --port 3000 --strictPort",
+    "dev:app": "npm run dev",
+    "dev:data": "node server/data-server.mjs",
+    "start:all": "bash ./scripts/start-studio.sh",
+    "stop:all": "bash ./scripts/stop-studio.sh",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -19,6 +23,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.27",

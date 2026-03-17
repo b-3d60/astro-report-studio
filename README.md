@@ -35,7 +35,21 @@ A professional visual editor for creating beautiful reports and dossiers with PD
    npm run dev
    ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
+### Start/Stop Shortcuts (App + Datenserver)
+
+- Startet Datenserver (Port 3001) und App (Port 3000) gemeinsam:
+   ```bash
+   npm run start:all
+   ```
+
+- Stoppt Datenserver und App gemeinsam:
+   ```bash
+   npm run stop:all
+   ```
+
+- Logs und PID-Dateien liegen unter `.studio/logs` und `.studio/pids`.
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Build
 
